@@ -17,7 +17,7 @@ Simple image carousel written with pure JS
 </body>
 ```
 
-#### 3. Initialize slideshow. Place the following code after container in HTML
+#### 3. Initialize slideshow. Place the following code after slideshow container
 ```html
 <script>
 
