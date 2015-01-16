@@ -3,17 +3,35 @@ Simple image carousel written with pure JS
 
 ### Initialization
 
-```js
+#### 1. Add JS and CSS files
+```html
+<link rel="stylesheet" href="../dist/pure-js-slideshow.css">
+<script src="../dist/pure-js-slideshow.js"></script>
+```
 
-// Create an instance
-var carousel = new Carousel('carousel');
+#### 2. Create slideshow container within body element
+```html
+<body>
+    <!-- Container -->
+    <div id="carousel"></div>
+</body>
+```
 
-// Initialize and pass images
-carousel.initialize([
-    'img/image-1.jpg',
-    'img/image-2.jpg',
-    'img/image-3.jpg',
-    'img/image-4.jpg',
-    'img/image-5.jpg'
-]);
+#### 3. Initialize slideshow. Place the following code after container in HTML
+```html
+<script>
+
+    // Create an instance, pass container id
+    var pureJSSlideshow = new PureJSSlideshow('carousel');
+
+    // Initialize and pass images
+    pureJSSlideshow.initialize([
+        'images/image-1.jpg',
+        'images/image-2.jpg',
+        'images/image-3.jpg',
+        'images/image-4.jpg',
+        'images/image-5.jpg'
+    ]);
+
+</script>
 ```
