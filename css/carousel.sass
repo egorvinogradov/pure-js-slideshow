@@ -1,0 +1,62 @@
+@mixin transition($property, $duration)
+    -webkit-transition: $property $duration
+    -moz-transition: $property $duration
+    -ms-transition: $property $duration
+    transition: $property $duration
+
+.container
+    width: 960px
+    margin: 50px auto
+
+.carousel
+    position: relative
+    overflow: hidden
+
+.carousel-inner
+    position: relative
+    white-space: nowrap
+    left: 0
+    @include transition(left, 300ms)
+
+.carousel-item
+    display: inline-block
+    width: 33.5%
+    vertical-align: middle
+
+    &:first-child
+        margin-left: 0
+
+.carousel-image
+    width: 100%
+
+.carousel-button
+    display: block
+    position: absolute
+    text-indent: -100em
+    overflow: hidden
+    top: 50%
+    margin-top: -25px
+    border-width: 25px
+    border-style: solid
+    border-color: transparent
+    width: 0
+    height: 0
+    padding: 0
+    background: none
+    opacity: .5
+    @include transition(opacity, 200ms)
+
+    &:hover
+        opacity: 1
+
+    &:active,
+    &:focus
+        outline: none
+
+.carousel-prev
+    left: 0
+    border-right-color: #fff
+
+.carousel-next
+    right: 0
+    border-left-color: #fff
