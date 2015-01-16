@@ -1,14 +1,14 @@
-class Carousel
+class PureJSSlideshow
 
     container: null
-    containerClass: "carousel"
+    containerClass: "pure-js-slideshow"
 
     activeItemIndex: 0
     visibleItemsNumber: 3
 
     selectors:
-        item: ".carousel-item"
-        image: ".carousel-image"
+        item: ".pure-js-slideshow-item"
+        image: ".pure-js-slideshow-image"
 
     constructor: (@containerId) ->
 
@@ -35,28 +35,26 @@ class Carousel
             @switchItem "next"
         , false
 
-        console.log('Initialized carousel', @container, @files)
-
     render: ->
 
         @container.classList.add @containerClass
 
-        @inner = @createElement "div", className: "carousel-inner", @container
+        @inner = @createElement "div", className: "pure-js-slideshow-inner", @container
 
         @prev = @createElement "button", {
-            className: "carousel-button carousel-prev"
+            className: "pure-js-slideshow-button pure-js-slideshow-prev"
             innerHTML: "Prev"
         }, @container
 
         @next = @createElement "button", {
-            className: "carousel-button carousel-next",
+            className: "pure-js-slideshow-button pure-js-slideshow-next",
             innerHTML: "Next"
         }, @container
 
         for file in @files
-            item = @createElement "div", className: "carousel-item", @inner
+            item = @createElement "div", className: "pure-js-slideshow-item", @inner
             image = @createElement "img", {
-                className: "carousel-image",
+                className: "pure-js-slideshow-image",
                 src: file
             }, item
 

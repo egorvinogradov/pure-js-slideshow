@@ -4,21 +4,17 @@
     -ms-transition: $property $duration
     transition: $property $duration
 
-.container
-    width: 960px
-    margin: 50px auto
-
-.carousel
+.pure-js-slideshow
     position: relative
     overflow: hidden
 
-.carousel-inner
+.pure-js-slideshow-inner
     position: relative
     white-space: nowrap
     left: 0
     @include transition(left, 300ms)
 
-.carousel-item
+.pure-js-slideshow-item
     display: inline-block
     width: 33.5%
     vertical-align: middle
@@ -26,10 +22,10 @@
     &:first-child
         margin-left: 0
 
-.carousel-image
+.pure-js-slideshow-image
     width: 100%
 
-.carousel-button
+.pure-js-slideshow-button
     display: block
     position: absolute
     text-indent: -100em
@@ -53,10 +49,10 @@
     &:focus
         outline: none
 
-.carousel-prev
+.pure-js-slideshow-prev
     left: 0
     border-right-color: #fff
 
-.carousel-next
+.pure-js-slideshow-next
     right: 0
     border-left-color: #fff

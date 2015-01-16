@@ -1,0 +1,54 @@
+.pure-js-slideshow {
+  position: relative;
+  overflow: hidden; }
+
+.pure-js-slideshow-inner {
+  position: relative;
+  white-space: nowrap;
+  left: 0;
+  -webkit-transition: left 300ms;
+  -moz-transition: left 300ms;
+  -ms-transition: left 300ms;
+  transition: left 300ms; }
+
+.pure-js-slideshow-item {
+  display: inline-block;
+  width: 33.5%;
+  vertical-align: middle; }
+  .pure-js-slideshow-item:first-child {
+    margin-left: 0; }
+
+.pure-js-slideshow-image {
+  width: 100%; }
+
+.pure-js-slideshow-button {
+  display: block;
+  position: absolute;
+  text-indent: -100em;
+  overflow: hidden;
+  top: 50%;
+  margin-top: -25px;
+  border-width: 25px;
+  border-style: solid;
+  border-color: transparent;
+  width: 0;
+  height: 0;
+  padding: 0;
+  background: none;
+  opacity: 0.5;
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  -ms-transition: opacity 200ms;
+  transition: opacity 200ms; }
+  .pure-js-slideshow-button:hover {
+    opacity: 1; }
+  .pure-js-slideshow-button:active, .pure-js-slideshow-button:focus {
+    outline: none; }
+
+.pure-js-slideshow-prev {
+  left: 0;
+  border-right-color: white; }
+
+.pure-js-slideshow-next {
+  right: 0;
+  border-left-color: white; }

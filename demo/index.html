@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Pure JS Slideshow</title>
+    <link rel="stylesheet" href="demo.css">
+
+
+    <!-- Add CSS and JS -->
+    <link rel="stylesheet" href="../dist/pure-js-slideshow.css">
+    <script src="../dist/pure-js-slideshow.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="carousel"></div>
+    </div>
+
+    <script>
+
+        // Create an instance, pass container id
+        var pureJSSlideshow = new PureJSSlideshow('carousel');
+
+        // Initialize and pass images
+        pureJSSlideshow.initialize([
+            'images/image-1.jpg',
+            'images/image-2.jpg',
+            'images/image-3.jpg',
+            'images/image-4.jpg',
+            'images/image-5.jpg'
+        ]);
+
+    </script>
+
+</body>
+</html>
