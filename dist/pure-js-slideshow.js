@@ -43,6 +43,7 @@ PureJSSlideshow = (function() {
 
   PureJSSlideshow.prototype.render = function() {
     var file, image, item, _i, _len, _ref, _results;
+    this.container.innerHTML = "";
     this.container.classList.add(this.containerClass);
     this.inner = this.createElement("div", {
       className: "pure-js-slideshow-inner"

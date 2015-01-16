@@ -37,6 +37,7 @@ class PureJSSlideshow
 
     render: ->
 
+        @container.innerHTML = "";
         @container.classList.add @containerClass
 
         @inner = @createElement "div", className: "pure-js-slideshow-inner", @container
